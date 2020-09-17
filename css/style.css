@@ -1,0 +1,76 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+}
+
+#header {
+    height: 250px;
+}
+
+#heading-container {
+    margin: 15px 0 15px 15px;
+    padding: 50px 0 50px 15px;;
+}
+
+h6 {
+    color: rgb(71, 71, 71);
+}
+
+#results-container {
+    margin-left: 1.5rem;
+}
+
+#filter-icon, #add-icon {
+    display: none;
+}
+
+#results {
+    height: 100%;
+}
+
+input:focus {
+    outline: none;
+}
+
+@media (max-width: 767px) {  
+    #heading {font-size:1.9rem;}
+    #subheading {display: none}
+    #filters {display: none}
+    #results-container {margin-left: 0}
+    #button {display: none}
+    #header {height: 110px;}
+    #heading-container {margin: auto; padding: 20px;}
+    #mobile-heading {display: block}
+    #filter-icon {display: inline-block; position: absolute; margin: 15px 20px 0 0; padding-left: 0;}
+    #add-icon {display: block; position: relative; float: right; margin-top: 15px;}
+    #filter-img {height: 50px; width: 50px}
+    #add-img {height: 50px;}
+  }
+
+  @media (max-width: 558px) {
+    #heading {font-size:1.5rem; text-align: center; margin-bottom: 0}
+    #filter-img {height: 40px; width: 40px}
+    #add-img {height: 40px;}
+    #header {height: 100px;}
+  }
+
+  @media (max-width: 464px) {
+    #heading {font-size:1.3rem; text-align: center; margin-bottom: 0}
+    #filter-img {height: 35px; width: 35px}
+    #add-img {height: 35px;}
+    #header {height: 95px;}
+  }
+
+  @media (max-width: 415px) {
+    #heading {font-size:1.2rem; text-align: center; margin-bottom: 0}
+  }
+
+  @media (max-width: 391px) {
+    #heading {font-size:1.0rem; text-align: center; margin-bottom: 0}
+    #filter-img {height: 30px; width: 30px}
+    #add-img {height: 30px;}
+    #header {height: 90px;}
+  }
