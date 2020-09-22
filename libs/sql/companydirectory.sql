@@ -60,12 +60,13 @@ INSERT INTO `location` (`id`, `name`) VALUES
 
 -- Dumping structure for table companydirectory.personnel
 CREATE TABLE IF NOT EXISTS `personnel` (
-  `id` int(11) DEFAULT NULL,
+  `id` int(11) DEFAULT NULL AUTO_INCREMENT,
   `firstName` varchar(50) DEFAULT NULL,
   `lastName` varchar(50) DEFAULT NULL,
   `jobTitle` varchar(50) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
-  `departmentID` int(11) DEFAULT NULL
+  `departmentID` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Dumping data for table companydirectory.personnel: ~100 rows (approximately)

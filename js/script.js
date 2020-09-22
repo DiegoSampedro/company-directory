@@ -445,6 +445,38 @@ $('document').ready(function() {
     });
 
 
+    // save profile button event listener
+
+    $('#saving-profile').click(function() {
+
+        $.ajax({
+            url: "./libs/php/insertNewProfile.php",
+            type: 'POST',
+            data: {
+                firstName: $('#employeeName').val(),
+                lastName: $('#employeeSurname').val(),
+                jobTitle: $('#employeePosition').val(),
+                email: $('#employeeEmail').val(),
+                departmentID: $('#employeeDepartment').val()
+            },
+            dataType: 'json',
+            success: function(result) {
+    
+                console.log(result);
+    
+                if (result.status.name == "ok") {
+    
+                }
+            
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.log(errorThrown);
+            }
+        });
+
+
+    })
+
 
 
 // sidebar event listeners
@@ -462,5 +494,65 @@ $('document').ready(function() {
         }
     });
 
+
+// functions
+
+
+function getAllDepartments() {
+
+    $.ajax({
+        url: "./libs/php/getAllDepartments.php",
+        type: 'POST',
+        dataType: 'json',
+        success: function(result) {
+
+            console.log(result);
+
+            if (result.status.name == "ok") {
+
+                for(i = 0; i < result.data.length; i++) {
+                   $("#employeeDepartment").append("<option value='" + result['data'][i]['id'] + "'>" + result['data'][i]['name'] + "</option>")
+                }
+
+            }
+        
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log(errorThrown);
+        }
+    }); 
+
+}
+
+getAllDepartments();
+
+
+function getAllLocations() {
+
+    $.ajax({
+        url: "./libs/php/getAllLocations.php",
+        type: 'POST',
+        dataType: 'json',
+        success: function(result) {
+
+            console.log(result);
+
+            if (result.status.name == "ok") {
+
+                for(i = 0; i < result.data.length; i++) {
+                   $("#employeeLocation").append("<option value='" + result['data'][i]['name'] + "'>" + result['data'][i]['name'] + "</option>")
+                }
+
+            }
+        
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log(errorThrown);
+        }
+    }); 
+
+}
+
+getAllLocations();
 
 })

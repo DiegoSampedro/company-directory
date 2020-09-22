@@ -35,7 +35,7 @@ h6 {
     outline: none;
 }
 
-#employeeName, #employeeSurname, #employeeEmail, #employeeDepartment, #employeePosition {
+#employeeName, #employeeSurname, #employeeEmail, #employeeDepartment, #employeePosition, #employeeLocation {
     border: 1px solid blue;
     border-radius: 5px;
 }
@@ -126,4 +126,5 @@ h6 {
     #filter-img {height: 30px; width: 30px}
     #add-img {height: 30px;}
     #header {height: 90px;}
+    label {font-size: 0.8rem;}
   }

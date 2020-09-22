@@ -1,14 +1,17 @@
 <?php
 
+
 	// example use from browser
-	// http://localhost/companydirectory/libs/php/insertDepartment.php?name=New%20Department&locationID=1
+	// http://localhost/companydirectory/libs/php/getDepartmentByID.php?id=2
 	
+	// remove next two lines for production
+
 	ini_set('display_errors', 'On');
 	error_reporting(E_ALL);
 
-	include("config.php");
+	$executionStartTime = microtime(true);
 
-	header('Content-Type: application/json; charset=UTF-8');
+	include("config.php");
 
 	$conn = new mysqli($cd_host, $cd_user, $cd_password, $cd_dbname, $cd_port, $cd_socket);
 
@@ -20,17 +23,14 @@
 		$output['data'] = [];
 
 		echo "Failed to connect to MySQL: " . $conn -> connect_error;
-
+		
 		mysqli_close($conn);
-
-		echo json_encode($output);
 
 		exit;
 
 	}	
 
-
-	$query = 'INSERT INTO department (name, locationID) VALUES("' . $_REQUEST['name'] . '",' . $_REQUEST["locationID"] . ')';
+	$query = 'SELECT id, name, locationID FROM department WHERE name = ' . $_REQUEST['department'];
 
 	$result = $conn->query($query);
 	
@@ -48,11 +48,22 @@
 		exit;
 
 	}
+   
+   	$data = [];
+
+	while ($row = mysqli_fetch_assoc($result)) {
+
+		array_push($data, $row);
+
+	}
 
 	$output['status']['code'] = "200";
 	$output['status']['name'] = "ok";
 	$output['status']['description'] = "success";
-	$output['data'] = [];
+	$output['status']['returnedIn'] = (microtime(true) - $executionStartTime) / 1000 . " ms";
+	$output['data'] = $data;
+
+	header('Content-Type: application/json; charset=UTF-8');
 	
 	mysqli_close($conn);
 

@@ -30,7 +30,7 @@
 	}	
 
 
-	$query = 'INSERT INTO department (name, locationID) VALUES("' . $_REQUEST['name'] . '",' . $_REQUEST["locationID"] . ')';
+	$query = 'INSERT INTO personnel (firstName, lastName, jobTitle, email, departmentID) VALUES (' . $_REQUEST["firstName"] . ', ' . $_REQUEST["lastName"] . ', ' . $_REQUEST["jobTitle"] . ', ' . $_REQUEST["email"] . ', ' . $_REQUEST["departmentID"] . ')';
 
 	$result = $conn->query($query);
 	
