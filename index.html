@@ -120,7 +120,7 @@
                 <div id="add-icon">
                     <img src="./images/add-icon.png" id="add-img" data-toggle="modal" data-target="#exampleModal">
                 </div>
-                <!--This is the modal-->
+                <!--This is the modal to add a new profile-->
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg" role="document">
                       <div class="modal-content">
@@ -188,6 +188,57 @@
                       </div>
                     </div>
                   </div>
+
+
+                         <!--This is the modal to edit departments-->
+                            
+                         <div class="modal fade" id="departmentsModal" tabindex="-1" role="dialog" aria-labelledby="Label" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="Label">Edit Departments</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container-fluid" id="edit-departments">
+
+                                        
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+
+                        <!--This is the modal to edit locations-->
+                            
+                        <div class="modal fade" id="locationsModal" tabindex="-1" role="dialog" aria-labelledby="Labellocations" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="Labellocations">Edit Locations</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container-fluid" id="edit-locations">
+
+                                        
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
 
                 <div class="col-7" id="heading-container">
                     <h1 id="heading">Company Directory</h1>
@@ -274,9 +325,14 @@
                                             <input class="form-check-input" type="checkbox" value="Business Development" id="bd">
                                             <label class="form-check-label" for="bd">Business Development</label>
                                         </div>
-
+                                        <div class="row text-center mt-2">
+                                            <div class="col">
+                                               <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#departmentsModal" id="edit-departments-btn">Edit departments</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+
                             
                                 </div>
                             
@@ -313,6 +369,11 @@
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" value="Munich" id="munich">
                                             <label class="form-check-label" for="munich">Munich</label>
+                                        </div>
+                                        <div class="row text-center mt-2">
+                                            <div class="col">
+                                               <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#locationsModal" id="edit-locations-btn">Edit locations</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

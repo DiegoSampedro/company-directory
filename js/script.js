@@ -478,6 +478,88 @@ $('document').ready(function() {
     })
 
 
+    // delete department button event listener
+
+    $('.delete-department-btn').each(item => {
+    
+           item.click(function() {
+
+        $.ajax({
+            url: "./libs/php/deleteDepartmentByID.php",
+            type: 'POST',
+            data: {
+                department: $(this).val()
+            },
+            dataType: 'json',
+            success: function(result) {
+    
+                console.log(result);
+    
+                if (result.status.name == "ok") {
+    
+                }
+            
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.log(errorThrown);
+            }
+        });
+
+    });
+
+    })
+
+    // Adding all departments to the edit departments modal
+
+        $.ajax({
+            url: "./libs/php/getAllDepartments.php",
+            type: 'POST',
+            dataType: 'json',
+            success: function(result) {
+    
+                console.log(result);
+    
+                if (result.status.name == "ok") {
+    
+                    for(i = 0; i < result.data.length; i++) {
+                       $("#edit-departments").append('<div class="row justify-content-center my-auto""><div class="col-6 outline"><input class="m-1" type="text" value="' + result['data'][i]['name'] + '"></div><div class="col-2"><button type="button" class="btn btn-outline-success btn-sm mt-1 update-department-btn" value="' + result['data'][i]['name'] + '">Update</button></div><div class="col-2"><button type="button" class="btn btn-outline-danger btn-sm mt-1 delete-department-btn" value="' + result['data'][i]['name'] + '">Delete</button></div></div>')
+                    }
+    
+                }
+            
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.log(errorThrown);
+            }
+        }); 
+
+    
+    // Adding all locations to the edit departments modal
+
+    $.ajax({
+        url: "./libs/php/getAllLocations.php",
+        type: 'POST',
+        dataType: 'json',
+        success: function(result) {
+
+            console.log(result);
+
+            if (result.status.name == "ok") {
+
+                for(i = 0; i < result.data.length; i++) {
+                   $("#edit-locations").append('<div class="row justify-content-center my-auto""><div class="col-6 outline"><input class="m-1" type="text" value="' + result['data'][i]['name'] + '"></div><div class="col-2"><button type="button" class="btn btn-outline-success btn-sm mt-1 update-location-btn" id="">Update</button></div><div class="col-2"><button type="button" class="btn btn-outline-danger btn-sm mt-1 delete-location-btn" id="">Delete</button></div></div>')
+                }
+
+            }
+        
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log(errorThrown);
+        }
+    }); 
+
+
+
 
 // sidebar event listeners
 
@@ -494,6 +576,32 @@ $('document').ready(function() {
         }
     });
 
+
+// Remove department/location filters
+
+$('#departments-filter input:checkbox').on('change', function() {
+    if(this.checked && ("#location-filters input:checkbox:checked").length > 0) {
+        $("#location-filters input:checkbox:checked").prop('checked', false);
+    }
+})
+
+$('#location-filters input:checkbox').on('change', function() {
+    if(this.checked && ("#departments-filter input:checkbox:checked").length > 0) {
+        $("#departments-filter input:checkbox:checked").prop('checked', false);
+    }
+})
+
+$('#mobile-department-filters input:checkbox').on('change', function() {
+    if(this.checked && ("#mobile-location-filters input:checkbox:checked").length > 0) {
+        $("#mobile-location-filters input:checkbox:checked").prop('checked', false);
+    }
+})
+
+$('#mobile-location-filters input:checkbox').on('change', function() {
+    if(this.checked && ("#mobile-department-filters input:checkbox:checked").length > 0) {
+        $("#mobile-department-filters input:checkbox:checked").prop('checked', false);
+    }
+})
 
 // functions
 
@@ -552,7 +660,5 @@ function getAllLocations() {
     }); 
 
 }
-
-getAllLocations();
 
 })

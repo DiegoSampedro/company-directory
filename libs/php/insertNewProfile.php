@@ -30,7 +30,10 @@
 	}	
 
 
-	$query = 'INSERT INTO personnel (firstName, lastName, jobTitle, email, departmentID) VALUES (' . $_REQUEST["firstName"] . ', ' . $_REQUEST["lastName"] . ', ' . $_REQUEST["jobTitle"] . ', ' . $_REQUEST["email"] . ', ' . $_REQUEST["departmentID"] . ')';
+	$query = 'INSERT INTO personnel (firstName, lastName, jobTitle, email, departmentID) VALUES ("' . $_REQUEST["firstName"] . '","' . $_REQUEST["lastName"] . '","' . $_REQUEST["jobTitle"] . '","' . $_REQUEST["email"] . '",' . $_REQUEST["departmentID"] . ')';
+
+	//echo $query;
+	//exit;
 
 	$result = $conn->query($query);
 	
