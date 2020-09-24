@@ -35,12 +35,12 @@ h6 {
     outline: none;
 }
 
-#employeeName, #employeeSurname, #employeeEmail, #employeeDepartment, #employeePosition, #employeeLocation {
+#employeeName, #employeeSurname, #employeeEmail, #employeeDepartment, #employeePosition, #employeeLocation, #existingEmployeeName, #existingEmployeeSurname, #existingEmployeeEmail, #existingEmployeeDepartment, #existingEmployeePosition, #existingEmployeeLocation {
     border: 1px solid blue;
     border-radius: 5px;
 }
 
-.outline input {
+.outline input, select {
     border: 1px solid blue;
     border-radius: 5px;
 }
@@ -84,17 +84,25 @@ h6 {
     margin-left: 50px;
   }
 
-  .update-location-btn, .delete-location-btn, .update-department-btn, .delete-department-btn {
+  .update-location-btn, .delete-location-btn, .update-department-btn, .delete-department-btn, #add-department, #add-location {
     padding: .15rem .4rem !important;
     font-size: .8rem !important;
     margin-right: 0 !important;
   }
-  
-  
-  @media screen and (max-height: 450px) {
-    .sidebar {padding-top: 15px;}
-    .sidebar a {font-size: 18px;}
+
+  .reduced-height {
+      line-height: 0.7 !important;
   }
+  
+
+  @media (max-width: 1130px) { 
+    .reduced-height {font-size: 0.9rem}
+}
+
+@media (max-width: 1070px) { 
+    
+}
+  
 
 @media (max-width: 990px) { 
     .profile-info-2 {display: none}
@@ -131,8 +139,13 @@ h6 {
     #add-img {height: 35px;}
     #header {height: 95px;}
     .outline input {font-size: 0.8rem; width: 95%}
-    .update-location-btn, .delete-location-btn, .update-department-btn, .delete-department-btn {
+    .update-location-btn, .delete-location-btn, .update-department-btn, .delete-department-btn, select, #add-department, #add-location {
         padding: .1rem .4rem !important; font-size: .7rem !important; margin-right: 0.2rem !important;}
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
   }
 
   @media (max-width: 415px) {

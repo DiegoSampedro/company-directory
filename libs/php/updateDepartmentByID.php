@@ -30,7 +30,7 @@
 
 	}	
 
-	$query = 'DELETE FROM department WHERE id = ' . $_REQUEST['id'];
+	$query = 'UPDATE department SET name = "' . $_REQUEST["name"] . '" WHERE id = ' . $_REQUEST['id'];
 
 	$result = $conn->query($query);
 	

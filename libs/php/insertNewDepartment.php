@@ -30,7 +30,7 @@
 
 	}	
 
-	$query = 'DELETE FROM department WHERE id = ' . $_REQUEST['id'];
+	$query = 'INSERT INTO department (name, locationID) VALUES ("' . $_REQUEST["name"] . '", ' . $_REQUEST["locationID"] . ')';
 
 	$result = $conn->query($query);
 	
