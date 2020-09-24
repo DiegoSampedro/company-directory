@@ -480,9 +480,7 @@ $('document').ready(function() {
 
     // delete department button event listener
 
-    $('.delete-department-btn').each(item => {
-    
-           item.click(function() {
+    $('.delete-department-btn').click(function() {
 
         $.ajax({
             url: "./libs/php/deleteDepartmentByID.php",
@@ -506,8 +504,7 @@ $('document').ready(function() {
         });
 
     });
-
-    })
+    
 
     // Adding all departments to the edit departments modal
 
