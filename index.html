@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+   <link href="./vendors/dropzone.css" type="text/css" rel="stylesheet" />
 
 </head>
 <body>
@@ -114,12 +115,12 @@
                                             <option value="" disabled selected hidden>Select a department</option>
                                         </select>                         
                                     </div>
-                                    <div class="col-4 col-lg-2">
+                                    <!--<div class="col-4 col-lg-2">
                                         <label for="employeeEmail">Image: </label>
                                     </div>
                                     <div class="col-8 col-lg-4">
                                         <input class="w-100" type="file" id="employeeImage" accept="image/png, image/jpeg" required>                           
-                                    </div>
+                                    </div>-->
                                 </div>
                                 
                             </div>
@@ -146,42 +147,60 @@
                         <div class="modal-body">
                             <div class="container">
                                 <div class="row justify-content-center">
-                                    <div id="profileID" style="display:none;"></div>
-                                    <div class="col-4 col-lg-2">
-                                        <label for="existingEmployeeName">First Name: </label>
+                                    <div class="col-6 col-lg-4">
+                                        <div class="col">
+                                            <label for="employeeEmail">Profile Image: </label>
+                                        </div>
+                                        <div class="col">
+                                            <form action="./libs/php/upload.php" class="dropzone">
+                                                <input type="hidden" name="id" value="" id="profileID">   
+                                            </form>                        
+                                        </div>
                                     </div>
-                                    <div class="col-8 col-lg-4">
-                                        <input class="w-100" type="text" id="existingEmployeeName" required>                               
-                                    </div>
-                                    <div class="col-4 col-lg-2">
-                                        <label for="existingEmployeeSurname">Last Name: </label>
-                                    </div>
-                                    <div class="col-8 col-lg-4">
-                                        <input class="w-100" type="text" id="existingEmployeeSurname" required>                               
-                                    </div>
-                                </div>
-                                <div class="row justify-content-start">
-                                    <div class="col-4 col-lg-2">
-                                        <label for="existingEmployeePosition">Position: </label>
-                                    </div>
-                                    <div class="col-8 col-lg-4">
-                                        <input class="w-100" type="text" id="existingEmployeePosition" required>                               
-                                    </div>
-                                    <div class="col-4 col-lg-2">
-                                        <label for="existingEmployeeEmail">Email: </label>
-                                    </div>
-                                    <div class="col-8 col-lg-4">
-                                        <input class="w-100" type="text" id="existingEmployeeEmail" required>                               
-                                    </div>
-                                </div>
-                                <div class="row justify-content-start">
-                                    <div class="col-4 col-lg-2">
-                                        <label for="existingEmployeeDepartment">Department: </label>
-                                    </div>
-                                    <div class="col-8 col-lg-4">
-                                        <select class="w-100" name="departments" id="existingEmployeeDepartment" required> 
-                                            <option value="" disabled selected hidden>Select a department</option>
-                                        </select>                         
+                                    <div class="col-12 col-lg-8 mt-4">
+                                        <div class="row justify-content-center">
+                                            <div id="profileID" style="display:none;"></div>
+                                            <div class="col-3">
+                                                <label for="existingEmployeeName">First Name: </label>
+                                            </div>
+                                            <div class="col-5">
+                                                <input class="w-100" type="text" id="existingEmployeeName" required>                               
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-3">
+                                                <label for="existingEmployeeSurname">Last Name: </label>
+                                            </div>
+                                            <div class="col-5">
+                                                <input class="w-100" type="text" id="existingEmployeeSurname" required>                               
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-3">
+                                                <label for="existingEmployeePosition">Position: </label>
+                                            </div>
+                                            <div class="col-5">
+                                                <input class="w-100" type="text" id="existingEmployeePosition" required>                               
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-3">
+                                                <label for="existingEmployeeEmail">Email: </label>
+                                            </div>
+                                            <div class="col-5">
+                                                <input class="w-100" type="text" id="existingEmployeeEmail" required>                               
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-3">
+                                                <label for="existingEmployeeDepartment">Department: </label>
+                                            </div>
+                                            <div class="col-5">
+                                                <select class="w-100" name="departments" id="existingEmployeeDepartment" required> 
+                                                    <option value="" disabled selected hidden>Select a department</option>
+                                                </select>                         
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 
@@ -190,7 +209,7 @@
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                           <button type="button" class="btn btn-primary" id="update-profile">Update Profile</button>
-                          <button type="button" class="btn btn-primary" id="delete-profile">Detete Profile</button>
+                          <button type="button" class="btn btn-primary" id="delete-profile">Delete Profile</button>
                         </div>
                       </div>
                     </div>
@@ -425,5 +444,6 @@
     <script src="./vendors/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script type="application/javascript" src="./js/script.js"></script>
+    <script src="./vendors/dropzone.js"></script>>
 </body>
 </hmtl>

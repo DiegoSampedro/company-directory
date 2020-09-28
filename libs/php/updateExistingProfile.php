@@ -7,6 +7,8 @@
 	ini_set('display_errors', 'On');
 	error_reporting(E_ALL);
 
+	session_start();
+
 	include("config.php");
 
 	header('Content-Type: application/json; charset=UTF-8');
@@ -30,7 +32,7 @@
 
 	}	
 
-	$query = 'UPDATE personnel SET firstName = "' . $_REQUEST["firstName"] . '", lastName = "' . $_REQUEST["lastName"] . '", jobTitle = "' . $_REQUEST["jobTitle"] . '", email = "' . $_REQUEST["email"] . '", departmentID = "' . $_REQUEST["departmentID"] . '"  WHERE id = ' . $_REQUEST['id'];
+	$query = 'UPDATE personnel SET firstName = "' . $_REQUEST["firstName"] . '", lastName = "' . $_REQUEST["lastName"] . '", jobTitle = "' . $_REQUEST["jobTitle"] . '", email = "' . $_REQUEST["email"] . '", departmentID = "' . $_REQUEST["departmentID"] . '", photo = "./images/profiles/' . $_REQUEST["id"] . '.' . $_SESSION['ext'] . '"  WHERE id = ' . $_REQUEST['id'];
 
 	$result = $conn->query($query);
 	

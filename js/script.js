@@ -12,7 +12,7 @@ $('document').ready(function() {
 
                 for(i = 0; i < result.data.length; i++) {
                    
-                   $('#results').append('<div class="col-12 col-lg-6 shadow-sm p-3 mb-3 bg-white rounded"><div class="row"><div class="col-3 my-auto mr-4"><img src="images/avatar.png"  id="avatar"></div><div class="col-7 my-auto reduced-height"><div class="row"><p class="firstName" id="' + result['data'][i]['id'] + '">' + result['data'][i]['firstName'] + '&nbsp</p><span class="lastName"> ' + result['data'][i]['lastName'] + '</span></div><div class="row"><p class="position">' + result['data'][i]['jobTitle'] + '</p></div><div class="row"><p class="email">' + result['data'][i]['email'] + '</p></div><div class="row"><p class="department">' + result['data'][i]['department'] + '</p></div><div class="row"><p class="location">' + result['data'][i]['location'] + '</p></div></div><div class="col-1 pr-2 align-top"><img src="images/icon-edit.png" data-toggle="modal" data-target="#profileModal" id="edit-icon"></div></div></div>')
+                   $('#results').append('<div class="col-12 col-lg-6 shadow-sm p-3 mb-3 bg-white rounded"><div class="row"><div class="col-3 my-auto mr-4"><img src="' + result['data'][i]['photo'] + '"  id="avatar"></div><div class="col-7 my-auto reduced-height"><div class="row"><p class="firstName mr-1" id="' + result['data'][i]['id'] + '">' + result['data'][i]['firstName'] + '</p><span class="lastName">' + result['data'][i]['lastName'] + '</span></div><div class="row"><p class="position">' + result['data'][i]['jobTitle'] + '</p></div><div class="row"><p class="email">' + result['data'][i]['email'] + '</p></div><div class="row"><p class="department">' + result['data'][i]['department'] + '</p></div><div class="row"><p class="location">' + result['data'][i]['location'] + '</p></div></div><div class="col-1 pr-2 align-top"><img src="images/icon-edit.png" data-toggle="modal" data-target="#profileModal" id="edit-icon"></div></div></div>')
                 }
 
             }
@@ -45,7 +45,7 @@ $('document').ready(function() {
 
                     for(i = 0; i < result.data.length; i++) {
                     
-                        $('#results').append('<div class="col-12 col-lg-6 shadow-sm p-3 mb-3 bg-white rounded"><div class="row"><div class="col-3 my-auto mr-4"><img src="images/avatar.png"  id="avatar"></div><div class="col-7 my-auto reduced-height"><div class="row"><p class="firstName" id="' + result['data'][i]['id'] + '">' + result['data'][i]['firstName'] + '&nbsp</p><span class="lastName"> ' + result['data'][i]['lastName'] + '</span></div><div class="row"><p class="position">' + result['data'][i]['jobTitle'] + '</p></div><div class="row"><p class="email">' + result['data'][i]['email'] + '</p></div><div class="row"><p class="department">' + result['data'][i]['department'] + '</p></div><div class="row"><p class="location">' + result['data'][i]['location'] + '</p></div></div><div class="col-1 pr-2 align-top"><img src="images/icon-edit.png" data-toggle="modal" data-target="#profileModal" id="edit-icon"></div></div></div>')
+                        $('#results').append('<div class="col-12 col-lg-6 shadow-sm p-3 mb-3 bg-white rounded"><div class="row"><div class="col-3 my-auto mr-4"><img src="' + result['data'][i]['photo'] + '"  id="avatar"></div><div class="col-7 my-auto reduced-height"><div class="row"><p class="firstName" id="' + result['data'][i]['id'] + '">' + result['data'][i]['firstName'] + '&nbsp</p><span class="lastName">' + result['data'][i]['lastName'] + '</span></div><div class="row"><p class="position">' + result['data'][i]['jobTitle'] + '</p></div><div class="row"><p class="email">' + result['data'][i]['email'] + '</p></div><div class="row"><p class="department">' + result['data'][i]['department'] + '</p></div><div class="row"><p class="location">' + result['data'][i]['location'] + '</p></div></div><div class="col-1 pr-2 align-top"><img src="images/icon-edit.png" data-toggle="modal" data-target="#profileModal" id="edit-icon"></div></div></div>')
                     }
     
                 }
@@ -81,7 +81,7 @@ $('document').ready(function() {
     
                         for(i = 0; i < result.data.length; i++) {
                            
-                            $('#results').append('<div class="col-12 col-lg-6 shadow-sm p-3 mb-3 bg-white rounded"><div class="row"><div class="col-3 my-auto mr-4"><img src="images/avatar.png"  id="avatar"></div><div class="col-7 my-auto reduced-height"><div class="row"><p class="firstName" id="' + result['data'][i]['id'] + '">' + result['data'][i]['firstName'] + '&nbsp</p><span class="lastName"> ' + result['data'][i]['lastName'] + '</span></div><div class="row"><p class="position">' + result['data'][i]['jobTitle'] + '</p></div><div class="row"><p class="email">' + result['data'][i]['email'] + '</p></div><div class="row"><p class="department">' + result['data'][i]['department'] + '</p></div><div class="row"><p class="location">' + result['data'][i]['location'] + '</p></div></div><div class="col-1 pr-2 align-top"><img src="images/icon-edit.png" data-toggle="modal" data-target="#profileModal" id="edit-icon"></div></div></div>')
+                            $('#results').append('<div class="col-12 col-lg-6 shadow-sm p-3 mb-3 bg-white rounded"><div class="row"><div class="col-3 my-auto mr-4"><img src="' + result['data'][i]['photo'] + '"  id="avatar"></div><div class="col-7 my-auto reduced-height"><div class="row"><p class="firstName" id="' + result['data'][i]['id'] + '">' + result['data'][i]['firstName'] + '&nbsp</p><span class="lastName">' + result['data'][i]['lastName'] + '</span></div><div class="row"><p class="position">' + result['data'][i]['jobTitle'] + '</p></div><div class="row"><p class="email">' + result['data'][i]['email'] + '</p></div><div class="row"><p class="department">' + result['data'][i]['department'] + '</p></div><div class="row"><p class="location">' + result['data'][i]['location'] + '</p></div></div><div class="col-1 pr-2 align-top"><img src="images/icon-edit.png" data-toggle="modal" data-target="#profileModal" id="edit-icon"></div></div></div>')
                         }
         
                     }
@@ -117,7 +117,7 @@ $('document').ready(function() {
     
                         for(i = 0; i < result.data.length; i++) {
                            
-                            $('#results').append('<div class="col-12 col-lg-6 shadow-sm p-3 mb-3 bg-white rounded"><div class="row"><div class="col-3 my-auto mr-4"><img src="images/avatar.png"  id="avatar"></div><div class="col-7 my-auto reduced-height"><div class="row"><p class="firstName" id="' + result['data'][i]['id'] + '">' + result['data'][i]['firstName'] + '&nbsp</p><span class="lastName"> ' + result['data'][i]['lastName'] + '</span></div><div class="row"><p class="position">' + result['data'][i]['jobTitle'] + '</p></div><div class="row"><p class="email">' + result['data'][i]['email'] + '</p></div><div class="row"><p class="department">' + result['data'][i]['department'] + '</p></div><div class="row"><p class="location">' + result['data'][i]['location'] + '</p></div></div><div class="col-1 pr-2 align-top"><img src="images/icon-edit.png" data-toggle="modal" data-target="#profileModal" id="edit-icon"></div></div></div>')
+                            $('#results').append('<div class="col-12 col-lg-6 shadow-sm p-3 mb-3 bg-white rounded"><div class="row"><div class="col-3 my-auto mr-4"><img src="' + result['data'][i]['photo'] + '"  id="avatar"></div><div class="col-7 my-auto reduced-height"><div class="row"><p class="firstName" id="' + result['data'][i]['id'] + '">' + result['data'][i]['firstName'] + '&nbsp</p><span class="lastName">' + result['data'][i]['lastName'] + '</span></div><div class="row"><p class="position">' + result['data'][i]['jobTitle'] + '</p></div><div class="row"><p class="email">' + result['data'][i]['email'] + '</p></div><div class="row"><p class="department">' + result['data'][i]['department'] + '</p></div><div class="row"><p class="location">' + result['data'][i]['location'] + '</p></div></div><div class="col-1 pr-2 align-top"><img src="images/icon-edit.png" data-toggle="modal" data-target="#profileModal" id="edit-icon"></div></div></div>')
                         }
         
                     }
@@ -145,7 +145,7 @@ $('document').ready(function() {
         
                         for(i = 0; i < result.data.length; i++) {
                            
-                            $('#results').append('<div class="col-12 col-lg-6 shadow-sm p-3 mb-3 bg-white rounded"><div class="row"><div class="col-3 my-auto mr-4"><img src="images/avatar.png"  id="avatar"></div><div class="col-7 my-auto reduced-height"><div class="row"><p class="firstName" id="' + result['data'][i]['id'] + '">' + result['data'][i]['firstName'] + '&nbsp</p><span class="lastName"> ' + result['data'][i]['lastName'] + '</span></div><div class="row"><p class="position">' + result['data'][i]['jobTitle'] + '</p></div><div class="row"><p class="email">' + result['data'][i]['email'] + '</p></div><div class="row"><p class="department">' + result['data'][i]['department'] + '</p></div><div class="row"><p class="location">' + result['data'][i]['location'] + '</p></div></div><div class="col-1 pr-2 align-top"><img src="images/icon-edit.png" data-toggle="modal" data-target="#profileModal" id="edit-icon"></div></div></div>')
+                            $('#results').append('<div class="col-12 col-lg-6 shadow-sm p-3 mb-3 bg-white rounded"><div class="row"><div class="col-3 my-auto mr-4"><img src="' + result['data'][i]['photo'] + '"  id="avatar"></div><div class="col-7 my-auto reduced-height"><div class="row"><p class="firstName" id="' + result['data'][i]['id'] + '">' + result['data'][i]['firstName'] + '&nbsp</p><span class="lastName">' + result['data'][i]['lastName'] + '</span></div><div class="row"><p class="position">' + result['data'][i]['jobTitle'] + '</p></div><div class="row"><p class="email">' + result['data'][i]['email'] + '</p></div><div class="row"><p class="department">' + result['data'][i]['department'] + '</p></div><div class="row"><p class="location">' + result['data'][i]['location'] + '</p></div></div><div class="col-1 pr-2 align-top"><img src="images/icon-edit.png" data-toggle="modal" data-target="#profileModal" id="edit-icon"></div></div></div>')
                         }
         
                     }
@@ -181,7 +181,7 @@ $('document').ready(function() {
     
                         for(i = 0; i < result.data.length; i++) {
                            
-                            $('#results').append('<div class="col-12 col-lg-6 shadow-sm p-3 mb-3 bg-white rounded"><div class="row"><div class="col-3 my-auto mr-4"><img src="images/avatar.png"  id="avatar"></div><div class="col-7 my-auto reduced-height"><div class="row"><p class="firstName" id="' + result['data'][i]['id'] + '">' + result['data'][i]['firstName'] + '&nbsp</p><span class="lastName"> ' + result['data'][i]['lastName'] + '</span></div><div class="row"><p class="position">' + result['data'][i]['jobTitle'] + '</p></div><div class="row"><p class="email">' + result['data'][i]['email'] + '</p></div><div class="row"><p class="department">' + result['data'][i]['department'] + '</p></div><div class="row"><p class="location">' + result['data'][i]['location'] + '</p></div></div><div class="col-1 pr-2 align-top"><img src="images/icon-edit.png" data-toggle="modal" data-target="#profileModal" id="edit-icon"></div></div></div>')
+                            $('#results').append('<div class="col-12 col-lg-6 shadow-sm p-3 mb-3 bg-white rounded"><div class="row"><div class="col-3 my-auto mr-4"><img src="' + result['data'][i]['photo'] + '"  id="avatar"></div><div class="col-7 my-auto reduced-height"><div class="row"><p class="firstName" id="' + result['data'][i]['id'] + '">' + result['data'][i]['firstName'] + '&nbsp</p><span class="lastName">' + result['data'][i]['lastName'] + '</span></div><div class="row"><p class="position">' + result['data'][i]['jobTitle'] + '</p></div><div class="row"><p class="email">' + result['data'][i]['email'] + '</p></div><div class="row"><p class="department">' + result['data'][i]['department'] + '</p></div><div class="row"><p class="location">' + result['data'][i]['location'] + '</p></div></div><div class="col-1 pr-2 align-top"><img src="images/icon-edit.png" data-toggle="modal" data-target="#profileModal" id="edit-icon"></div></div></div>')
                         }
         
                     }
@@ -217,7 +217,7 @@ $('document').ready(function() {
     
                         for(i = 0; i < result.data.length; i++) {
                            
-                            $('#results').append('<div class="col-12 col-lg-6 shadow-sm p-3 mb-3 bg-white rounded"><div class="row"><div class="col-3 my-auto mr-4"><img src="images/avatar.png"  id="avatar"></div><div class="col-7 my-auto reduced-height"><div class="row"><p class="firstName" id="' + result['data'][i]['id'] + '">' + result['data'][i]['firstName'] + '&nbsp</p><span class="lastName"> ' + result['data'][i]['lastName'] + '</span></div><div class="row"><p class="position">' + result['data'][i]['jobTitle'] + '</p></div><div class="row"><p class="email">' + result['data'][i]['email'] + '</p></div><div class="row"><p class="department">' + result['data'][i]['department'] + '</p></div><div class="row"><p class="location">' + result['data'][i]['location'] + '</p></div></div><div class="col-1 pr-2 align-top"><img src="images/icon-edit.png" data-toggle="modal" data-target="#profileModal" id="edit-icon"></div></div></div>')
+                            $('#results').append('<div class="col-12 col-lg-6 shadow-sm p-3 mb-3 bg-white rounded"><div class="row"><div class="col-3 my-auto mr-4"><img src="' + result['data'][i]['photo'] + '"  id="avatar"></div><div class="col-7 my-auto reduced-height"><div class="row"><p class="firstName" id="' + result['data'][i]['id'] + '">' + result['data'][i]['firstName'] + '&nbsp</p><span class="lastName">' + result['data'][i]['lastName'] + '</span></div><div class="row"><p class="position">' + result['data'][i]['jobTitle'] + '</p></div><div class="row"><p class="email">' + result['data'][i]['email'] + '</p></div><div class="row"><p class="department">' + result['data'][i]['department'] + '</p></div><div class="row"><p class="location">' + result['data'][i]['location'] + '</p></div></div><div class="col-1 pr-2 align-top"><img src="images/icon-edit.png" data-toggle="modal" data-target="#profileModal" id="edit-icon"></div></div></div>')
                         }
         
                     }
@@ -245,7 +245,7 @@ $('document').ready(function() {
         
                         for(i = 0; i < result.data.length; i++) {
                            
-                            $('#results').append('<div class="col-12 col-lg-6 shadow-sm p-3 mb-3 bg-white rounded"><div class="row"><div class="col-3 my-auto mr-4"><img src="images/avatar.png"  id="avatar"></div><div class="col-7 my-auto reduced-height"><div class="row"><p class="firstName" id="' + result['data'][i]['id'] + '">' + result['data'][i]['firstName'] + '&nbsp</p><span class="lastName"> ' + result['data'][i]['lastName'] + '</span></div><div class="row"><p class="position">' + result['data'][i]['jobTitle'] + '</p></div><div class="row"><p class="email">' + result['data'][i]['email'] + '</p></div><div class="row"><p class="department">' + result['data'][i]['department'] + '</p></div><div class="row"><p class="location">' + result['data'][i]['location'] + '</p></div></div><div class="col-1 pr-2 align-top"><img src="images/icon-edit.png" data-toggle="modal" data-target="#profileModal" id="edit-icon"></div></div></div>')
+                            $('#results').append('<div class="col-12 col-lg-6 shadow-sm p-3 mb-3 bg-white rounded"><div class="row"><div class="col-3 my-auto mr-4"><img src="' + result['data'][i]['photo'] + '"  id="avatar"></div><div class="col-7 my-auto reduced-height"><div class="row"><p class="firstName" id="' + result['data'][i]['id'] + '">' + result['data'][i]['firstName'] + '&nbsp</p><span class="lastName">' + result['data'][i]['lastName'] + '</span></div><div class="row"><p class="position">' + result['data'][i]['jobTitle'] + '</p></div><div class="row"><p class="email">' + result['data'][i]['email'] + '</p></div><div class="row"><p class="department">' + result['data'][i]['department'] + '</p></div><div class="row"><p class="location">' + result['data'][i]['location'] + '</p></div></div><div class="col-1 pr-2 align-top"><img src="images/icon-edit.png" data-toggle="modal" data-target="#profileModal" id="edit-icon"></div></div></div>')
                         }
         
                     }
@@ -282,7 +282,7 @@ $('document').ready(function() {
     
                         for(i = 0; i < result.data.length; i++) {
                            
-                            $('#results').append('<div class="col-12 col-lg-6 shadow-sm p-3 mb-3 bg-white rounded"><div class="row"><div class="col-3 my-auto mr-4"><img src="images/avatar.png"  id="avatar"></div><div class="col-7 my-auto reduced-height"><div class="row"><p class="firstName" id="' + result['data'][i]['id'] + '">' + result['data'][i]['firstName'] + '&nbsp</p><span class="lastName"> ' + result['data'][i]['lastName'] + '</span></div><div class="row"><p class="position">' + result['data'][i]['jobTitle'] + '</p></div><div class="row"><p class="email">' + result['data'][i]['email'] + '</p></div><div class="row"><p class="department">' + result['data'][i]['department'] + '</p></div><div class="row"><p class="location">' + result['data'][i]['location'] + '</p></div></div><div class="col-1 pr-2 align-top"><img src="images/icon-edit.png" data-toggle="modal" data-target="#profileModal" id="edit-icon"></div></div></div>')
+                            $('#results').append('<div class="col-12 col-lg-6 shadow-sm p-3 mb-3 bg-white rounded"><div class="row"><div class="col-3 my-auto mr-4"><img src="' + result['data'][i]['photo'] + '"  id="avatar"></div><div class="col-7 my-auto reduced-height"><div class="row"><p class="firstName" id="' + result['data'][i]['id'] + '">' + result['data'][i]['firstName'] + '&nbsp</p><span class="lastName">' + result['data'][i]['lastName'] + '</span></div><div class="row"><p class="position">' + result['data'][i]['jobTitle'] + '</p></div><div class="row"><p class="email">' + result['data'][i]['email'] + '</p></div><div class="row"><p class="department">' + result['data'][i]['department'] + '</p></div><div class="row"><p class="location">' + result['data'][i]['location'] + '</p></div></div><div class="col-1 pr-2 align-top"><img src="images/icon-edit.png" data-toggle="modal" data-target="#profileModal" id="edit-icon"></div></div></div>')
                         }
         
                     }
@@ -318,7 +318,7 @@ $('document').ready(function() {
     
                         for(i = 0; i < result.data.length; i++) {
                         
-                            $('#results').append('<div class="col-12 col-lg-6 shadow-sm p-3 mb-3 bg-white rounded"><div class="row"><div class="col-3 my-auto mr-4"><img src="images/avatar.png"  id="avatar"></div><div class="col-7 my-auto reduced-height"><div class="row"><p class="firstName" id="' + result['data'][i]['id'] + '">' + result['data'][i]['firstName'] + '&nbsp</p><span class="lastName"> ' + result['data'][i]['lastName'] + '</span></div><div class="row"><p class="position">' + result['data'][i]['jobTitle'] + '</p></div><div class="row"><p class="email">' + result['data'][i]['email'] + '</p></div><div class="row"><p class="department">' + result['data'][i]['department'] + '</p></div><div class="row"><p class="location">' + result['data'][i]['location'] + '</p></div></div><div class="col-1 pr-2 align-top"><img src="images/icon-edit.png" data-toggle="modal" data-target="#profileModal" id="edit-icon"></div></div></div>')
+                            $('#results').append('<div class="col-12 col-lg-6 shadow-sm p-3 mb-3 bg-white rounded"><div class="row"><div class="col-3 my-auto mr-4"><img src="' + result['data'][i]['photo'] + '"  id="avatar"></div><div class="col-7 my-auto reduced-height"><div class="row"><p class="firstName" id="' + result['data'][i]['id'] + '">' + result['data'][i]['firstName'] + '&nbsp</p><span class="lastName">' + result['data'][i]['lastName'] + '</span></div><div class="row"><p class="position">' + result['data'][i]['jobTitle'] + '</p></div><div class="row"><p class="email">' + result['data'][i]['email'] + '</p></div><div class="row"><p class="department">' + result['data'][i]['department'] + '</p></div><div class="row"><p class="location">' + result['data'][i]['location'] + '</p></div></div><div class="col-1 pr-2 align-top"><img src="images/icon-edit.png" data-toggle="modal" data-target="#profileModal" id="edit-icon"></div></div></div>')
                         }
         
                     }
@@ -346,7 +346,7 @@ $('document').ready(function() {
         
                         for(i = 0; i < result.data.length; i++) {
                            
-                            $('#results').append('<div class="col-12 col-lg-6 shadow-sm p-3 mb-3 bg-white rounded"><div class="row"><div class="col-3 my-auto mr-4"><img src="images/avatar.png"  id="avatar"></div><div class="col-7 my-auto reduced-height"><div class="row"><p class="firstName" id="' + result['data'][i]['id'] + '">' + result['data'][i]['firstName'] + '&nbsp</p><span class="lastName"> ' + result['data'][i]['lastName'] + '</span></div><div class="row"><p class="position">' + result['data'][i]['jobTitle'] + '</p></div><div class="row"><p class="email">' + result['data'][i]['email'] + '</p></div><div class="row"><p class="department">' + result['data'][i]['department'] + '</p></div><div class="row"><p class="location">' + result['data'][i]['location'] + '</p></div></div><div class="col-1 pr-2 align-top"><img src="images/icon-edit.png" data-toggle="modal" data-target="#profileModal" id="edit-icon"></div></div></div>')
+                            $('#results').append('<div class="col-12 col-lg-6 shadow-sm p-3 mb-3 bg-white rounded"><div class="row"><div class="col-3 my-auto mr-4"><img src="' + result['data'][i]['photo'] + '"  id="avatar"></div><div class="col-7 my-auto reduced-height"><div class="row"><p class="firstName" id="' + result['data'][i]['id'] + '">' + result['data'][i]['firstName'] + '&nbsp</p><span class="lastName">' + result['data'][i]['lastName'] + '</span></div><div class="row"><p class="position">' + result['data'][i]['jobTitle'] + '</p></div><div class="row"><p class="email">' + result['data'][i]['email'] + '</p></div><div class="row"><p class="department">' + result['data'][i]['department'] + '</p></div><div class="row"><p class="location">' + result['data'][i]['location'] + '</p></div></div><div class="col-1 pr-2 align-top"><img src="images/icon-edit.png" data-toggle="modal" data-target="#profileModal" id="edit-icon"></div></div></div>')
                         }
         
                     }
@@ -381,7 +381,7 @@ $('document').ready(function() {
     
                         for(i = 0; i < result.data.length; i++) {
                            
-                            $('#results').append('<div class="col-12 col-lg-6 shadow-sm p-3 mb-3 bg-white rounded"><div class="row"><div class="col-3 my-auto mr-4"><img src="images/avatar.png"  id="avatar"></div><div class="col-7 my-auto reduced-height"><div class="row"><p class="firstName" id="' + result['data'][i]['id'] + '">' + result['data'][i]['firstName'] + '&nbsp</p><span class="lastName"> ' + result['data'][i]['lastName'] + '</span></div><div class="row"><p class="position">' + result['data'][i]['jobTitle'] + '</p></div><div class="row"><p class="email">' + result['data'][i]['email'] + '</p></div><div class="row"><p class="department">' + result['data'][i]['department'] + '</p></div><div class="row"><p class="location">' + result['data'][i]['location'] + '</p></div></div><div class="col-1 pr-2 align-top"><img src="images/icon-edit.png" data-toggle="modal" data-target="#profileModal" id="edit-icon"></div></div></div>')
+                            $('#results').append('<div class="col-12 col-lg-6 shadow-sm p-3 mb-3 bg-white rounded"><div class="row"><div class="col-3 my-auto mr-4"><img src="' + result['data'][i]['photo'] + '"  id="avatar"></div><div class="col-7 my-auto reduced-height"><div class="row"><p class="firstName" id="' + result['data'][i]['id'] + '">' + result['data'][i]['firstName'] + '&nbsp</p><span class="lastName">' + result['data'][i]['lastName'] + '</span></div><div class="row"><p class="position">' + result['data'][i]['jobTitle'] + '</p></div><div class="row"><p class="email">' + result['data'][i]['email'] + '</p></div><div class="row"><p class="department">' + result['data'][i]['department'] + '</p></div><div class="row"><p class="location">' + result['data'][i]['location'] + '</p></div></div><div class="col-1 pr-2 align-top"><img src="images/icon-edit.png" data-toggle="modal" data-target="#profileModal" id="edit-icon"></div></div></div>')
                         }
         
                     }
@@ -417,7 +417,7 @@ $('document').ready(function() {
     
                         for(i = 0; i < result.data.length; i++) {
                            //$("#results").append("<div class='row shadow-sm p-3 mb-3 bg-white rounded'><div class='col-4 col-lg-3'><img src='images/avatar.png' style='height: 100px;'></div><div class='col-lg-4 col-8 my-auto'><p>" + result['data'][i]['firstName'] + ' ' + result['data'][i]['lastName'] + "</p><p>" + result['data'][i]['jobTitle'] + "</p></div><div class='col-4 my-auto profile-info-2'><p>" + result['data'][i]['email'] + "</p><p>" + result['data'][i]['department'] + "</p></div></div>")
-                           $('#results').append('<div class="col-12 col-lg-6 shadow-sm p-3 mb-3 bg-white rounded"><div class="row"><div class="col-3 my-auto mr-4"><img src="images/avatar.png"  id="avatar"></div><div class="col-7 my-auto reduced-height"><div class="row"><p class="firstName" id="' + result['data'][i]['id'] + '">' + result['data'][i]['firstName'] + '&nbsp</p><span class="lastName"> ' + result['data'][i]['lastName'] + '</span></div><div class="row"><p class="position">' + result['data'][i]['jobTitle'] + '</p></div><div class="row"><p class="email">' + result['data'][i]['email'] + '</p></div><div class="row"><p class="department">' + result['data'][i]['department'] + '</p></div><div class="row"><p class="location">' + result['data'][i]['location'] + '</p></div></div><div class="col-1 pr-2 align-top"><img src="images/icon-edit.png" data-toggle="modal" data-target="#profileModal" id="edit-icon"></div></div></div>')
+                           $('#results').append('<div class="col-12 col-lg-6 shadow-sm p-3 mb-3 bg-white rounded"><div class="row"><div class="col-3 my-auto mr-4"><img src="' + result['data'][i]['photo'] + '"  id="avatar"></div><div class="col-7 my-auto reduced-height"><div class="row"><p class="firstName" id="' + result['data'][i]['id'] + '">' + result['data'][i]['firstName'] + '&nbsp</p><span class="lastName">' + result['data'][i]['lastName'] + '</span></div><div class="row"><p class="position">' + result['data'][i]['jobTitle'] + '</p></div><div class="row"><p class="email">' + result['data'][i]['email'] + '</p></div><div class="row"><p class="department">' + result['data'][i]['department'] + '</p></div><div class="row"><p class="location">' + result['data'][i]['location'] + '</p></div></div><div class="col-1 pr-2 align-top"><img src="images/icon-edit.png" data-toggle="modal" data-target="#profileModal" id="edit-icon"></div></div></div>')
                         }
         
                     }
@@ -445,7 +445,7 @@ $('document').ready(function() {
         
                         for(i = 0; i < result.data.length; i++) {
                            //$("#results").append("<div class='row shadow-sm p-3 mb-3 bg-white rounded'><div class='col-4 col-lg-3'><img src='images/avatar.png' style='height: 100px;'></div><div class='col-lg-4 col-8 my-auto'><p>" + result['data'][i]['firstName'] + ' ' + result['data'][i]['lastName'] + "</p><p>" + result['data'][i]['jobTitle'] + "</p></div><div class='col-4 my-auto profile-info-2'><p>" + result['data'][i]['email'] + "</p><p>" + result['data'][i]['department'] + "</p></div></div>")
-                           $('#results').append('<div class="col-12 col-lg-6 shadow-sm p-3 mb-3 bg-white rounded"><div class="row"><div class="col-3 my-auto mr-4"><img src="images/avatar.png"  id="avatar"></div><div class="col-7 my-auto reduced-height"><div class="row"><p class="firstName" id="' + result['data'][i]['id'] + '">' + result['data'][i]['firstName'] + '&nbsp</p><span class="lastName"> ' + result['data'][i]['lastName'] + '</span></div><div class="row"><p class="position">' + result['data'][i]['jobTitle'] + '</p></div><div class="row"><p class="email">' + result['data'][i]['email'] + '</p></div><div class="row"><p class="department">' + result['data'][i]['department'] + '</p></div><div class="row"><p class="location">' + result['data'][i]['location'] + '</p></div></div><div class="col-1 pr-2 align-top"><img src="images/icon-edit.png" data-toggle="modal" data-target="#profileModal" id="edit-icon"></div></div></div>')
+                           $('#results').append('<div class="col-12 col-lg-6 shadow-sm p-3 mb-3 bg-white rounded"><div class="row"><div class="col-3 my-auto mr-4"><img src="' + result['data'][i]['photo'] + '" id="avatar"></div><div class="col-7 my-auto reduced-height"><div class="row"><p class="firstName" id="' + result['data'][i]['id'] + '">' + result['data'][i]['firstName'] + '&nbsp</p><span class="lastName">' + result['data'][i]['lastName'] + '</span></div><div class="row"><p class="position">' + result['data'][i]['jobTitle'] + '</p></div><div class="row"><p class="email">' + result['data'][i]['email'] + '</p></div><div class="row"><p class="department">' + result['data'][i]['department'] + '</p></div><div class="row"><p class="location">' + result['data'][i]['location'] + '</p></div></div><div class="col-1 pr-2 align-top"><img src="images/icon-edit.png" data-toggle="modal" data-target="#profileModal" id="edit-icon"></div></div></div>')
                         }
         
                     }
@@ -486,8 +486,10 @@ $('document').ready(function() {
             error: function(jqXHR, textStatus, errorThrown) {
                 console.log(errorThrown);
             }
+
         });
 
+        location.reload(true);
 
     })
 
@@ -496,13 +498,13 @@ $('document').ready(function() {
 
     $('#update-profile').click(function() {
 
-        console.log($('#profileID').text())
+        //console.log($('#profileID').text())
 
         $.ajax({
             url: "./libs/php/updateExistingProfile.php",
             type: 'POST',
             data: {
-                id: $('#profileID').text(),
+                id: $('#profileID').val(),
                 firstName: $('#existingEmployeeName').val(),
                 lastName: $('#existingEmployeeSurname').val(),
                 jobTitle: $('#existingEmployeePosition').val(),
@@ -524,6 +526,8 @@ $('document').ready(function() {
             }
         });
 
+        location.reload(true);
+
     })
 
 
@@ -535,7 +539,7 @@ $('document').ready(function() {
             url: "./libs/php/deleteProfileByID.php",
             type: 'POST',
             data: {
-                id: $('existingProfileID').val()
+                id: $('#profileID').val()
             },
             dataType: 'json',
             success: function(result) {
@@ -551,6 +555,8 @@ $('document').ready(function() {
                 console.log(errorThrown);
             }
         });
+
+        location.reload(true);
 
     })
 
@@ -582,6 +588,8 @@ $('document').ready(function() {
                 }
             });
 
+            location.reload(true);
+
         } else if (e.target.innerHTML === "Update") {
 
             $.ajax({
@@ -605,6 +613,8 @@ $('document').ready(function() {
                     console.log(errorThrown);
                 }
             });
+
+            location.reload(true);
 
         }
 
@@ -638,6 +648,8 @@ $('document').ready(function() {
                 }
             });
 
+            location.reload(true);
+
         } else if (e.target.innerHTML === "Update") {
 
             $.ajax({
@@ -661,6 +673,8 @@ $('document').ready(function() {
                     console.log(errorThrown);
                 }
             });
+
+            location.reload(true);
 
         }
 
@@ -693,6 +707,8 @@ $('document').ready(function() {
             }
         }); 
 
+        location.reload(true);
+
     })
 
 
@@ -721,6 +737,8 @@ $('document').ready(function() {
             }
         }); 
 
+        location.reload(true);
+
     })
 
 
@@ -729,15 +747,16 @@ $('document').ready(function() {
     $('#results').click(function(e) {
 
         if(e.target.id === 'edit-icon') {
-            //console.log($(e.target).parent().prev().find(':first-child').find(':first-child').attr('id'))
+            //console.log($(e.target).parent().prev().find('.row:eq(1)').find(':first-child').text())
 
         $('#existingEmployeeName').attr('value', $(e.target).parent().prev().find(':first-child').find(':first-child').text());
         $('#existingEmployeeSurname').attr('value', $(e.target).parent().prev().find(':first-child').find(':eq(1)').text());
-        $('#existingEmployeePosition').attr('value', $(e.target).parent().prev().find(':eq(1)').find(':first-child').text());
+        $('#existingEmployeePosition').attr('value', $(e.target).parent().prev().find('.row:eq(1)').find(':first-child').text());
         $('#existingEmployeeEmail').attr('value', $(e.target).parent().prev().find('.row:eq(2)').find(':first-child').text());
         $('#existingEmployeeDepartment').find("option:contains('" + $(e.target).parent().prev().find('.row:eq(3)').find(':first-child').text() + "')").attr('selected', 'selected');
         var id = $(e.target).parent().prev().find('.row:eq(0)').find(':first-child').attr('id');
-        $('#profileID').append('<p class="existingProfileID">' + id + '</p>')
+        //$('#profileID').append('<p class="existingProfileID">' + id + '</p>')
+        $('#profileID').attr('value', id);
 
     }
         

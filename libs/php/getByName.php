@@ -29,7 +29,7 @@
 
 	}	
 
-	$query = 'SELECT p.lastName, p.firstName, p.jobTitle, p.email, p.id, CONCAT(p.firstName, " ", p.lastName) as fullName, d.name as department, l.name as location FROM personnel p LEFT JOIN department d ON (d.id = p.departmentID) LEFT JOIN location l ON (l.id = d.locationID) WHERE CONCAT(p.firstName, " ", p.lastName) LIKE "%' . $_REQUEST['search'] . '%" ORDER BY p.lastName, p.firstName, d.name, l.name';
+	$query = 'SELECT p.lastName, p.firstName, p.jobTitle, p.email, p.photo, p.id, CONCAT(p.firstName, " ", p.lastName) as fullName, d.name as department, l.name as location FROM personnel p LEFT JOIN department d ON (d.id = p.departmentID) LEFT JOIN location l ON (l.id = d.locationID) WHERE CONCAT(p.firstName, " ", p.lastName) LIKE "%' . $_REQUEST['search'] . '%" ORDER BY p.lastName, p.firstName, d.name, l.name';
 
 	$result = $conn->query($query);
 

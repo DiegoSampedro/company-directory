@@ -91,11 +91,13 @@ h6 {
   }
 
   .reduced-height {
-      line-height: 0.7 !important;
+      line-height: 0.6 !important;
   }
   
   #avatar {
     height: 100px;
+    width: 100px;
+    border-radius: 50%;
   }
 
   #edit-icon {
@@ -104,7 +106,7 @@ h6 {
 
   @media (min-width: 980px) and (max-width: 1130px) { 
     .reduced-height {font-size: 0.8rem}
-    #avatar {height: 80px}
+    #avatar {height: 80px; width: 80px}
     #edit-icon {height: 15px; }
 }
 
@@ -164,7 +166,7 @@ h6 {
 
   @media (max-width: 415px) {
     #heading {font-size:1.2rem; text-align: center; margin-bottom: 0}
-    #avatar { height: 70px;}
+    #avatar { height: 70px; width: 70px;}
     .reduced-height {font-size: 0.7rem; line-height: 0.6}
     #edit-icon {height: 13px;}
   }
