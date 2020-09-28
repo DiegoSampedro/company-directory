@@ -94,8 +94,21 @@ h6 {
       line-height: 0.7 !important;
   }
   
+  #avatar {
+    height: 100px;
+  }
 
-  @media (max-width: 1130px) { 
+  #edit-icon {
+    height: 20px; 
+  }
+
+  @media (min-width: 980px) and (max-width: 1130px) { 
+    .reduced-height {font-size: 0.8rem}
+    #avatar {height: 80px}
+    #edit-icon {height: 15px; }
+}
+
+  @media (max-width: 932px) { 
     .reduced-height {font-size: 0.9rem}
 }
 
@@ -138,9 +151,10 @@ h6 {
     #filter-img {height: 35px; width: 35px}
     #add-img {height: 35px;}
     #header {height: 95px;}
-    .outline input {font-size: 0.8rem; width: 95%}
+    .outline input {font-size: 0.8rem;}
     .update-location-btn, .delete-location-btn, .update-department-btn, .delete-department-btn, select, #add-department, #add-location {
         padding: .1rem .4rem !important; font-size: .7rem !important; margin-right: 0.2rem !important;}
+     #location-list {padding: 0rem .1rem !important; font-size: .7rem !important; margin-right: 0.05rem !important;}
   }
 
   @media screen and (max-height: 450px) {
@@ -150,6 +164,9 @@ h6 {
 
   @media (max-width: 415px) {
     #heading {font-size:1.2rem; text-align: center; margin-bottom: 0}
+    #avatar { height: 70px;}
+    .reduced-height {font-size: 0.7rem; line-height: 0.6}
+    #edit-icon {height: 13px;}
   }
 
   @media (max-width: 391px) {
@@ -158,4 +175,5 @@ h6 {
     #add-img {height: 30px;}
     #header {height: 90px;}
     label {font-size: 0.8rem;}
+    .outline input {width: 99%;}
   }

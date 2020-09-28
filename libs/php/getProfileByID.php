@@ -1,7 +1,4 @@
 <?php
-
-	// example use from browser
-	// http://localhost/companydirectory/libs/php/getAll.php
 	
 	ini_set('display_errors', 'On');
 	error_reporting(E_ALL);
@@ -29,7 +26,7 @@
 
 	}	
 
-	$query = 'SELECT p.lastName, p.firstName, p.jobTitle, p.email, p.id, d.name as department, l.name as location FROM personnel p LEFT JOIN department d ON (d.id = p.departmentID) LEFT JOIN location l ON (l.id = d.locationID) ORDER BY p.lastName, p.firstName, d.name, l.name';
+	$query = 'SELECT id, name, locationID FROM department';
 
 	$result = $conn->query($query);
 	
