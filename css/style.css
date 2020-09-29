@@ -7,12 +7,12 @@
 }
 
 #header {
-    height: 200px;
+    height: 150px;
 }
 
 #heading-container {
-    margin: 15px 0 15px 15px;
-    padding: 30px 0 30px 15px;;
+    margin: 5px 0 5px 15px;
+    padding: 15px 0 15px 15px;
 }
 
 h6 {
@@ -141,14 +141,14 @@ h6 {
     #mySidebar{display: block;}
   }
 
-  @media (max-width: 558px) {
+  @media (max-width: 575px) {
     #heading {font-size:1.5rem; text-align: center; margin-bottom: 0}
     #filter-img {height: 40px; width: 40px}
     #add-img {height: 40px;}
     #header {height: 100px;}
   }
 
-  @media (max-width: 464px) {
+  @media (max-width: 480px) {
     #heading {font-size:1.3rem; text-align: center; margin-bottom: 0}
     #filter-img {height: 35px; width: 35px}
     #add-img {height: 35px;}
@@ -164,14 +164,14 @@ h6 {
     .sidebar a {font-size: 18px;}
   }
 
-  @media (max-width: 415px) {
+  @media (max-width: 432px) {
     #heading {font-size:1.2rem; text-align: center; margin-bottom: 0}
     #avatar { height: 70px; width: 70px;}
     .reduced-height {font-size: 0.7rem; line-height: 0.6}
     #edit-icon {height: 13px;}
   }
 
-  @media (max-width: 391px) {
+  @media (max-width: 408px) {
     #heading {font-size:1.0rem; text-align: center; margin-bottom: 0}
     #filter-img {height: 30px; width: 30px}
     #add-img {height: 30px;}
