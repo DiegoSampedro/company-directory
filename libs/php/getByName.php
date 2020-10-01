@@ -1,7 +1,4 @@
 <?php
-
-	// example use from browser
-	// http://localhost/companydirectory/libs/php/getAll.php
 	
 	ini_set('display_errors', 'On');
 	error_reporting(E_ALL);

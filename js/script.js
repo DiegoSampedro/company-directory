@@ -734,7 +734,7 @@ $('document').ready(function() {
             }
         }); 
 
-        location.reload(true);
+        //location.reload(true);
 
     })
 
