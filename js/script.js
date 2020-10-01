@@ -462,33 +462,47 @@ $('document').ready(function() {
 
     $('#saving-profile').click(function() {
 
-        $.ajax({
-            url: "./libs/php/insertNewProfile.php",
-            type: 'POST',
-            data: {
-                firstName: $('#employeeName').val(),
-                lastName: $('#employeeSurname').val(),
-                jobTitle: $('#employeePosition').val(),
-                email: $('#employeeEmail').val(),
-                departmentID: $('#employeeDepartment').val()
-            },
-            dataType: 'json',
-            success: function(result) {
-    
-                console.log(result);
-    
-                if (result.status.name == "ok") {
-    
+        if(!$('#employeeName').val()){
+            $('#employeeName').focus();
+        } else if(!$('#employeeSurname').val()){
+            $('#employeeSurname').focus();
+        } else if(!$('#employeePosition').val()){
+            $('#employeePosition').focus();
+        } else if(!$('#employeeEmail').val()){
+            $('#employeeEmail').focus();
+        } else if(!$('#employeeDepartment').val()){
+            $('#employeeDepartment').focus();
+        } else {
+
+            $.ajax({
+                url: "./libs/php/insertNewProfile.php",
+                type: 'POST',
+                data: {
+                    firstName: $('#employeeName').val(),
+                    lastName: $('#employeeSurname').val(),
+                    jobTitle: $('#employeePosition').val(),
+                    email: $('#employeeEmail').val(),
+                    departmentID: $('#employeeDepartment').val()
+                },
+                dataType: 'json',
+                success: function(result) {
+        
+                    console.log(result);
+        
+                    if (result.status.name == "ok") {
+        
+                    }
+                
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.log(errorThrown);
                 }
-            
-            },
-            error: function(jqXHR, textStatus, errorThrown) {
-                console.log(errorThrown);
-            }
 
-        });
+            });
 
-        location.reload(true);
+            location.reload(true);
+
+        }
 
     })
 
@@ -682,29 +696,36 @@ $('document').ready(function() {
 
     $('#add-department').click(function() {
 
-        $.ajax({
-            url: "./libs/php/insertNewDepartment.php",
-            type: 'POST',
-            dataType: 'json',
-            data: {
-                locationID: $('#location-list').val(),
-                name: $('#new-department-name').val()
-            },
-            success: function(result) {
-    
-                console.log(result);
-    
-                if (result.status.name == "ok") {
-    
-                }
-            
-            },
-            error: function(jqXHR, textStatus, errorThrown) {
-                console.log(errorThrown);
-            }
-        }); 
+        if(!$('#location-list').val()){
+            $('#location-list').focus();
+        } else if (!$('#new-department-name').val()) {
+            $('#new-department-name').focus();
+        } else {
 
-        location.reload(true);
+            $.ajax({
+                url: "./libs/php/insertNewDepartment.php",
+                type: 'POST',
+                dataType: 'json',
+                data: {
+                    locationID: $('#location-list').val(),
+                    name: $('#new-department-name').val()
+                },
+                success: function(result) {
+        
+                    console.log(result);
+        
+                    if (result.status.name == "ok") {
+        
+                    }
+                
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.log(errorThrown);
+                }
+            }); 
+
+            location.reload(true);
+        }
 
     })
 
@@ -713,28 +734,34 @@ $('document').ready(function() {
 
     $('#add-location').click(function() {
 
-        $.ajax({
-            url: "./libs/php/insertNewlocation.php",
-            type: 'POST',
-            dataType: 'json',
-            data: {
-                name: $('#new-location-name').val()
-            },
-            success: function(result) {
-    
-                console.log(result);
-    
-                if (result.status.name == "ok") {
-    
-                }
-            
-            },
-            error: function(jqXHR, textStatus, errorThrown) {
-                console.log(errorThrown);
-            }
-        }); 
+        if(!$('#new-location-name').val()){
+            $('#new-location-name').focus();
+        } else {
 
-        //location.reload(true);
+            $.ajax({
+                url: "./libs/php/insertNewLocation.php",
+                type: 'POST',
+                dataType: 'json',
+                data: {
+                    name: $('#new-location-name').val()
+                },
+                success: function(result) {
+        
+                    console.log(result);
+        
+                    if (result.status.name == "ok") {
+        
+                    }
+                
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.log(errorThrown);
+                }
+            }); 
+
+            location.reload(true);
+
+        }
 
     })
 
